@@ -3,12 +3,17 @@ import { FC } from "react";
 import products from "../products.json";
 
 interface IProduct {
-  category: string[];
-  color: string;
-  image: string;
-  name: string;
-  price: string;
-  sku: number;
+  id: string;
+  title: string;
+  category_hierarchies: {
+    categories: string[];
+  };
+  product_metadata: {
+    exact_price: {
+      display_price: number;
+    };
+    images: string[];
+  };
 }
 
 const CATEGORIES = [
@@ -17,7 +22,7 @@ const CATEGORIES = [
   { label: "Shoes", value: "Shoe" },
 ];
 
-const recommendations = [];
+const recommendations: IProduct[] = [];
 
 const App = () => {
   const [category, setCategory] = React.useState("Shoe");
@@ -33,7 +38,7 @@ const App = () => {
             <Grid emphasize>
               {recommendations.length > 0 ? (
                 recommendations.map((product) => (
-                  <Product key={product.sku} product={product} />
+                  <Product key={product.id} product={product} />
                 ))
               ) : (
                 <h1 className="text-white text-lg py-2">
@@ -55,9 +60,11 @@ const App = () => {
 
           <Grid>
             {products
-              .filter((p) => p.category.includes(category))
-              .map((product) => (
-                <Product key={product.sku} product={product} />
+              .filter((p) =>
+                p.category_hierarchies.categories.includes(category)
+              )
+              .map((p) => (
+                <Product key={p.id} product={p} />
               ))}
           </Grid>
         </section>
@@ -147,8 +154,11 @@ const Product: FC<{ product: IProduct }> = ({ product }) => {
   };
   return (
     <div className="shadow rounded-2xl p-6 bg-white opacity-90 flex flex-col">
-      <h1 className="text-xl font-bold">{product.name}</h1>
-      <img src={product.image} className="flex-1 h-48 m-auto" />
+      <h1 className="text-xl font-bold">{product.title}</h1>
+      <img
+        src={product.product_metadata.images[0]}
+        className="flex-1 h-48 m-auto"
+      />
       <div className="flex justify-between items-end">
         <div>
           <Button onClick={like(product)}>😍</Button>
@@ -156,7 +166,7 @@ const Product: FC<{ product: IProduct }> = ({ product }) => {
         </div>
         <p className="text-xl font-bold font-mono text-right">
           {/* {formatPrice(product.price)} */}
-          {product.price}
+          {product.product_metadata.exact_price.display_price}
         </p>
       </div>
     </div>
