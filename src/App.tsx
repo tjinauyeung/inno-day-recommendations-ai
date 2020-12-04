@@ -17,23 +17,31 @@ const CATEGORIES = [
   { label: "Shoes", value: "Shoe" },
 ];
 
+const recommendations = [];
+
 const App = () => {
   const [category, setCategory] = React.useState("Shoe");
 
   return (
     <div className="p-24 min-h-screen bg-gray-900">
       <div className="container mx-auto">
-        {/* <section className="my-12">
-      <Heading>Just for you</Heading>
-      <Grid>
-        {products.map((product) => (
-          <Product key={product.sku} product={product} />
-        ))}
-      </Grid>
-    </section> */}
-
         <section className="my-12">
           <Heading>The Stinged</Heading>
+
+          <section className="my-12">
+            <Subheading active>Just for you</Subheading>
+            <Grid emphasize>
+              {recommendations.length > 0 ? (
+                recommendations.map((product) => (
+                  <Product key={product.sku} product={product} />
+                ))
+              ) : (
+                <h1 className="text-white text-lg py-2">
+                  No recommendations yet
+                </h1>
+              )}
+            </Grid>
+          </section>
 
           {CATEGORIES.map((c) => (
             <button
@@ -64,15 +72,21 @@ const Heading = ({ children }) => (
 
 const Subheading = ({ children, active }) => (
   <h2
-    className="text-4xl mt-24 text-white mb-8 font-bold capitalize"
+    className="text-4xl mt-16 text-white mb-8 font-bold capitalize"
     style={{ opacity: active ? 1 : 0.5 }}
   >
     {children}
   </h2>
 );
 
-const Grid = ({ children }) => (
-  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+const Grid: FC<{ emphasize?: boolean }> = ({ children, emphasize }) => (
+  <div
+    className={
+      emphasize
+        ? `bg-gray-800 -mx-48 px-48 py-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`
+        : `grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`
+    }
+  >
     {children}
   </div>
 );
@@ -82,16 +96,53 @@ const Product: FC<{ product: IProduct }> = ({ product }) => {
     console.log("[event-emitted]: 'like-product'");
     console.log(JSON.stringify(data, null, 2));
     window.dataLayer.push({
-      event: "like-product",
-      data,
+      automl: {
+        eventType: "detail-page-view",
+        userInfo: {
+          // In most cases, the user and visitor ID fields can be populated
+          // from a client side JavaScript variable, for example a cookie.
+          // If you set the user and/or visitor ID values from the server,
+          // populate the `userId` and/or `visitorId` fields here.
+        },
+        eventDetail: {
+          recommendationToken: "recommendation-token",
+          // In most cases, the experiment ID field is populated from a
+          // client side JavaScript variable as defined by the experiment
+          // manager.
+          // If you set the experiment ID value from the server,
+          // populate the `experimentIds` field here.
+        },
+        productEventDetail: {
+          productDetails: [data],
+        },
+      },
     });
   };
+
   const dislike = (data) => () => {
     console.log("[event-emitted]: 'dislike-product'");
     console.log(JSON.stringify(data, null, 2));
     window.dataLayer.push({
-      event: "dislike-product",
-      data,
+      automl: {
+        eventType: "detail-page-view",
+        userInfo: {
+          // In most cases, the user and visitor ID fields can be populated
+          // from a client side JavaScript variable, for example a cookie.
+          // If you set the user and/or visitor ID values from the server,
+          // populate the `userId` and/or `visitorId` fields here.
+        },
+        eventDetail: {
+          recommendationToken: "recommendation-token",
+          // In most cases, the experiment ID field is populated from a
+          // client side JavaScript variable as defined by the experiment
+          // manager.
+          // If you set the experiment ID value from the server,
+          // populate the `experimentIds` field here.
+        },
+        productEventDetail: {
+          productDetails: [data],
+        },
+      },
     });
   };
   return (
@@ -114,7 +165,7 @@ const Product: FC<{ product: IProduct }> = ({ product }) => {
 
 const Button = ({ children, onClick }) => (
   <button
-    className="rounded-full w-12 h-12 shadow mr-2 text-3xl focus:ring focus:outline-none"
+    className="rounded-full w-12 h-12 shadow mr-2 text-3xl focus:outline-none focus:ring"
     onClick={onClick}
   >
     {children}
