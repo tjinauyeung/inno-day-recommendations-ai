@@ -1,51 +1,33 @@
 import * as React from "react";
 import { FC } from "react";
+import products from "../products.json";
 
 interface IProduct {
+  category: string[];
+  color: string;
   id: number;
+  image: string;
   name: string;
-  price: number;
+  price: string;
+  sku: number;
 }
-
-const products: IProduct[] = [
-  {
-    id: 1,
-    name: "Nike",
-    price: 120,
-  },
-  {
-    id: 2,
-    name: "Adidas",
-    price: 160,
-  },
-  {
-    id: 3,
-    name: "Reebok",
-    price: 160,
-  },
-  {
-    id: 4,
-    name: "Asics",
-    price: 160,
-  },
-];
 
 const App = () => (
   <div className="p-24 min-h-screen bg-gray-900">
-    <section className="my-12">
+    {/* <section className="my-12">
       <Heading>Just for you</Heading>
       <Grid>
         {products.map((product) => (
-          <Product key={product.id} product={product} />
+          <Product key={product.sku} product={product} />
         ))}
       </Grid>
-    </section>
+    </section> */}
 
     <section className="my-12">
       <Heading>Products</Heading>
       <Grid>
         {products.map((product) => (
-          <Product key={product.id} product={product} />
+          <Product key={product.sku} product={product} />
         ))}
       </Grid>
     </section>
@@ -64,20 +46,41 @@ const Grid = ({ children }) => (
 const Product: FC<{ product: IProduct }> = ({ product }) => (
   <div className="shadow rounded-lg p-6 bg-white">
     <h1 className="text-3xl font-bold">{product.name}</h1>
+    <img src={product.image} />
     <div className="flex justify-between items-end mt-12">
       <div>
-        <Button>👍</Button>
-        <Button>👎</Button>
+        <Button
+          onClick={() =>
+            window.dataLayer.push({
+              event: "like-product",
+            })
+          }
+        >
+          👍
+        </Button>
+        <Button
+          onClick={() =>
+            window.dataLayer.push({
+              event: "dislike-product",
+            })
+          }
+        >
+          👎
+        </Button>
       </div>
       <p className="text-2xl font-bold text-green-700 font-mono text-right">
-        {formatPrice(product.price)}
+        {/* {formatPrice(product.price)} */}
+        {product.price}
       </p>
     </div>
   </div>
 );
 
-const Button = ({ children }) => (
-  <button className="rounded-full w-10 h-10 shadow mr-2 focus:ring focus:outline-none">
+const Button = ({ children, onClick }) => (
+  <button
+    className="rounded-full w-10 h-10 shadow mr-2 focus:ring focus:outline-none"
+    onClick={onClick}
+  >
     {children}
   </button>
 );
