@@ -25,7 +25,7 @@ const CATEGORIES = [
 const recommendations: IProduct[] = [];
 
 const App = () => {
-  const [category, setCategory] = React.useState("Shoe");
+  const [category, setCategory] = React.useState("Shirt");
 
   return (
     <div className="p-24 min-h-screen bg-gray-900">
