@@ -1,442 +1,642 @@
 [
   {
-    "sku": 1,
-    "name": "Minimal Printed Shirt",
-    "category": [
-      "Shirt",
-      "Male"
-    ],
-    "price": "€29,95",
-    "color": "blue",
-    "image": "https://cdn.thesting.com/is/image/thesting/332787-bluedark_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "1",
+    "title": "Minimal Printed Shirt",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 29.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/332787-bluedark_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 2,
-    "name": "Minimal Printed Shirt",
-    "category": [
-      "Shirt",
-      "Male"
-    ],
-    "price": "€29,95",
-    "color": "black",
-    "image": "https://cdn.thesting.com/is/image/thesting/332787-black_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "2",
+    "title": "Minimal Printed Shirt",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 29.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/332787-black_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 3,
-    "name": "Check Shirt",
-    "category": [
-      "Shirt",
-      "Male"
-    ],
-    "price": "€49,95",
-    "color": "green",
-    "image": "https://cdn.thesting.com/is/image/thesting/334940-green_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "3",
+    "title": "Check Shirt",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 49.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/334940-green_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 4,
-    "name": "Big Check Shirt",
-    "category": [
-      "Shirt",
-      "Male"
-    ],
-    "price": "€49,95",
-    "color": "multi",
-    "image": "https://cdn.thesting.com/is/image/thesting/341046-assorted_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "4",
+    "title": "Big Check Shirt",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 49.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/341046-assorted_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 5,
-    "name": "Essentials Stretch Shirt",
-    "category": [
-      "Shirt",
-      "Male"
-    ],
-    "price": "€29,95",
-    "color": "green",
-    "image": "https://cdn.thesting.com/is/image/thesting/328353-greenolive_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "5",
+    "title": "Essentials Stretch Shirt",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 29.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/328353-greenolive_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 6,
-    "name": "Essentials Stretch Shirt",
-    "category": [
-      "Shirt",
-      "Male"
-    ],
-    "price": "€29,95",
-    "color": "blue",
-    "image": "https://cdn.thesting.com/is/image/thesting/328353-bluedark_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "6",
+    "title": "Essentials Stretch Shirt",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 29.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/328353-bluedark_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 7,
-    "name": "Essentials Stretch Shirt",
-    "category": [
-      "Shirt",
-      "Male"
-    ],
-    "price": "€29,95",
-    "color": "white",
-    "image": "https://cdn.thesting.com/is/image/thesting/328353-white_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "7",
+    "title": "Essentials Stretch Shirt",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 29.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/328353-white_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 8,
-    "name": "Denim Shirt",
-    "category": [
-      "Shirt",
-      "Male"
-    ],
-    "price": "€59,95",
-    "color": "black",
-    "image": "https://cdn.thesting.com/is/image/thesting/319473-black_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "8",
+    "title": "Denim Shirt",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 59.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/319473-black_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 9,
-    "name": "Denim Shirt",
-    "category": [
-      "Shirt",
-      "Male"
-    ],
-    "price": "€59,95",
-    "color": "blue",
-    "image": "https://cdn.thesting.com/is/image/thesting/319473-blueusedmiddle_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "9",
+    "title": "Denim Shirt",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 59.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/319473-blueusedmiddle_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 10,
-    "name": "Chess Check shirt",
-    "category": [
-      "Shirt",
-      "Male"
-    ],
-    "price": "€39,95",
-    "color": "green",
-    "image": "https://cdn.thesting.com/is/image/thesting/329255-greengrey_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "10",
+    "title": "Chess Check shirt",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 39.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/329255-greengrey_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 11,
-    "name": "Jay Pattern Pants",
-    "category": [
-      "Pant",
-      "Male"
-    ],
-    "price": "€49,95",
-    "color": "grey",
-    "image": "https://cdn.thesting.com/is/image/thesting/324415-greydark_mdfront3?wid=980&qlt=80&resMode=sharp"
+    "id": "11",
+    "title": "Jay Pattern Pants",
+    "category_hierarchies": {
+      "categories": ["Pant", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 49.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/324415-greydark_mdfront3?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 12,
-    "name": "Ray Skinny Cargo Pants",
-    "category": [
-      "Pant",
-      "Male"
-    ],
-    "price": "€59,95",
-    "color": "white",
-    "image": "https://cdn.thesting.com/is/image/thesting/335737-greylight_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "12",
+    "title": "Ray Skinny Cargo Pants",
+    "category_hierarchies": {
+      "categories": ["Pant", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 59.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/335737-greylight_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 13,
-    "name": "Ray Skinny Cargo Pants",
-    "category": [
-      "Pant",
-      "Male"
-    ],
-    "price": "€59,95",
-    "color": "black",
-    "image": "https://cdn.thesting.com/is/image/thesting/335737-black_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "13",
+    "title": "Ray Skinny Cargo Pants",
+    "category_hierarchies": {
+      "categories": ["Pant", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 59.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/335737-black_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 14,
-    "name": "Jay Check Pants",
-    "category": [
-      "Pant",
-      "Male"
-    ],
-    "price": "€49,95",
-    "color": "grey",
-    "image": "https://cdn.thesting.com/is/image/thesting/324413-greylightmelee_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "14",
+    "title": "Jay Check Pants",
+    "category_hierarchies": {
+      "categories": ["Pant", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 49.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/324413-greylightmelee_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 15,
-    "name": "Window Check Pants",
-    "category": [
-      "Pant",
-      "Male"
-    ],
-    "price": "€49,95",
-    "color": "blue",
-    "image": "https://cdn.thesting.com/is/image/thesting/324412-bluedark_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "15",
+    "title": "Window Check Pants",
+    "category_hierarchies": {
+      "categories": ["Pant", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 49.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/324412-bluedark_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 16,
-    "name": "Jay Check Pants",
-    "category": [
-      "Pant",
-      "Male"
-    ],
-    "price": "€49,95",
-    "color": "brown",
-    "image": "https://cdn.thesting.com/is/image/thesting/324413-brownmiddle_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "16",
+    "title": "Jay Check Pants",
+    "category_hierarchies": {
+      "categories": ["Pant", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 49.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/324413-brownmiddle_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 17,
-    "name": "Super Stretch Chino",
-    "category": [
-      "Pant",
-      "Male"
-    ],
-    "price": "€59,95",
-    "color": "green",
-    "image": "https://cdn.thesting.com/is/image/thesting/331168-greendark_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "17",
+    "title": "Super Stretch Chino",
+    "category_hierarchies": {
+      "categories": ["Pant", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 59.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/331168-greendark_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 18,
-    "name": "Super Stretch Chino",
-    "category": [
-      "Pant",
-      "Male"
-    ],
-    "price": "€59,95",
-    "color": "black",
-    "image": "https://cdn.thesting.com/is/image/thesting/331168-blackuseddark_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "18",
+    "title": "Super Stretch Chino",
+    "category_hierarchies": {
+      "categories": ["Pant", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 59.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/331168-blackuseddark_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 19,
-    "name": "Sweat Pants",
-    "category": [
-      "Pant",
-      "Male"
-    ],
-    "price": "€39,95",
-    "color": "white",
-    "image": "https://cdn.thesting.com/is/image/thesting/330552-greymelee_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "19",
+    "title": "Sweat Pants",
+    "category_hierarchies": {
+      "categories": ["Pant", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 39.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/330552-greymelee_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 20,
-    "name": "Celtic Smart Pants",
-    "category": [
-      "Pant",
-      "Male"
-    ],
-    "price": "€59,95",
-    "color": "grey",
-    "image": "https://cdn.thesting.com/is/image/thesting/329140-greylightmelee_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "20",
+    "title": "Celtic Smart Pants",
+    "category_hierarchies": {
+      "categories": ["Pant", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 59.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/329140-greylightmelee_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 21,
-    "name": "Western Chelsea Boots",
-    "category": [
-      "Shoe",
-      "Female"
-    ],
-    "price": "€69,95",
-    "color": "black",
-    "image": "https://cdn.thesting.com/is/image/thesting/335166-black_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "21",
+    "title": "Western Chelsea Boots",
+    "category_hierarchies": {
+      "categories": ["Shoe", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 69.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/335166-black_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 22,
-    "name": "Mixed Sneakers",
-    "category": [
-      "Shoe",
-      "Female"
-    ],
-    "price": "€49,95",
-    "color": "green",
-    "image": "https://cdn.thesting.com/is/image/thesting/329970-green_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "22",
+    "title": "Mixed Sneakers",
+    "category_hierarchies": {
+      "categories": ["Shoe", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 49.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/329970-green_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 23,
-    "name": "Animal Sneakers",
-    "category": [
-      "Shoe",
-      "Female"
-    ],
-    "price": "€49,95",
-    "color": "multi",
-    "image": "https://cdn.thesting.com/is/image/thesting/329947-cognac_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "23",
+    "title": "Animal Sneakers",
+    "category_hierarchies": {
+      "categories": ["Shoe", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 49.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/329947-cognac_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 24,
-    "name": "Autumn Chunky Sneakers",
-    "category": [
-      "Shoe",
-      "Female"
-    ],
-    "price": "€69,95",
-    "color": "white",
-    "image": "https://cdn.thesting.com/is/image/thesting/329964-kit_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "24",
+    "title": "Autumn Chunky Sneakers",
+    "category_hierarchies": {
+      "categories": ["Shoe", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 69.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/329964-kit_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 25,
-    "name": "Plateau Croco Boots",
-    "category": [
-      "Shoe",
-      "Female"
-    ],
-    "price": "€59,95",
-    "color": "black",
-    "image": "https://cdn.thesting.com/is/image/thesting/324733-black_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "25",
+    "title": "Plateau Croco Boots",
+    "category_hierarchies": {
+      "categories": ["Shoe", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 59.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/324733-black_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 26,
-    "name": "Chunky Leather Boots",
-    "category": [
-      "Shoe",
-      "Female"
-    ],
-    "price": "€69,95",
-    "color": "white",
-    "image": "https://cdn.thesting.com/is/image/thesting/326419-white_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "26",
+    "title": "Chunky Leather Boots",
+    "category_hierarchies": {
+      "categories": ["Shoe", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 69.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/326419-white_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 27,
-    "name": "Premium Chelsea Boots",
-    "category": [
-      "Shoe",
-      "Female"
-    ],
-    "price": "€69,95",
-    "color": "black",
-    "image": "https://cdn.thesting.com/is/image/thesting/328863-black_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "27",
+    "title": "Premium Chelsea Boots",
+    "category_hierarchies": {
+      "categories": ["Shoe", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 69.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/328863-black_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 28,
-    "name": "Suede sneakers",
-    "category": [
-      "Shoe",
-      "Male"
-    ],
-    "price": "€59,95",
-    "color": "black",
-    "image": "https://cdn.thesting.com/is/image/thesting/328872-black_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "28",
+    "title": "Suede sneakers",
+    "category_hierarchies": {
+      "categories": ["Shoe", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 59.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/328872-black_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 29,
-    "name": "Clean Sneakers",
-    "category": [
-      "Shoe",
-      "Male"
-    ],
-    "price": "€49,95",
-    "color": "white",
-    "image": "https://cdn.thesting.com/is/image/thesting/324585-white_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "29",
+    "title": "Clean Sneakers",
+    "category_hierarchies": {
+      "categories": ["Shoe", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 49.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/324585-white_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 30,
-    "name": "Bulky Sneakers",
-    "category": [
-      "Shoe",
-      "Male"
-    ],
-    "price": "€49,95",
-    "color": "black",
-    "image": "https://cdn.thesting.com/is/image/thesting/324581-black_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "30",
+    "title": "Bulky Sneakers",
+    "category_hierarchies": {
+      "categories": ["Shoe", "Male"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 49.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/324581-black_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 31,
-    "name": "Fancy Pintuck Blouse",
-    "category": [
-      "Shirt",
-      "Female"
-    ],
-    "price": "€39,95",
-    "color": "black",
-    "image": "https://cdn.thesting.com/is/image/thesting/331448-black_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "31",
+    "title": "Fancy Pintuck Blouse",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 39.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/331448-black_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 32,
-    "name": "Satin Peplum Blouse",
-    "category": [
-      "Shirt",
-      "Female"
-    ],
-    "price": "35,95",
-    "color": "red",
-    "image": "https://cdn.thesting.com/is/image/thesting/330162-mauve_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "32",
+    "title": "Satin Peplum Blouse",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 35.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/330162-mauve_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 33,
-    "name": "Satin Peplum Blouse",
-    "category": [
-      "Shirt",
-      "Female"
-    ],
-    "price": "35,95",
-    "color": "green",
-    "image": "https://cdn.thesting.com/is/image/thesting/330162-greendark_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "33",
+    "title": "Satin Peplum Blouse",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 35.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/330162-greendark_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 34,
-    "name": "Satin Peplum Blouse",
-    "category": [
-      "Shirt",
-      "Female"
-    ],
-    "price": "35,95",
-    "color": "white",
-    "image": "https://cdn.thesting.com/is/image/thesting/330162-mauvelight_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "34",
+    "title": "Satin Peplum Blouse",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 35.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/330162-mauvelight_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 35,
-    "name": "Foil Blouse",
-    "category": [
-      "Shirt",
-      "Female"
-    ],
-    "price": "39,95",
-    "color": "white",
-    "image": "https://cdn.thesting.com/is/image/thesting/330519-pinklight_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "35",
+    "title": "Foil Blouse",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 39.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/330519-pinklight_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 36,
-    "name": "Check Shirt",
-    "category": [
-      "Shirt",
-      "Female"
-    ],
-    "price": "49,95",
-    "color": "blue",
-    "image": "https://cdn.thesting.com/is/image/thesting/330961-bluedark_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "36",
+    "title": "Check Shirt",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 49.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/330961-bluedark_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 37,
-    "name": "Babycord Blouse",
-    "category": [
-      "Shirt",
-      "Female"
-    ],
-    "price": "39,95",
-    "color": "red",
-    "image": "https://cdn.thesting.com/is/image/thesting/339181-lilac_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "37",
+    "title": "Babycord Blouse",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 39.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/339181-lilac_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 38,
-    "name": "Foil Swiss Dots Blouse",
-    "category": [
-      "Shirt",
-      "Female"
-    ],
-    "price": "35,95",
-    "color": "white",
-    "image": "https://cdn.thesting.com/is/image/thesting/331331-offwhite_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "38",
+    "title": "Foil Swiss Dots Blouse",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 35.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/331331-offwhite_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 39,
-    "name": "Satin Frill Blouse",
-    "category": [
-      "Shirt",
-      "Female"
-    ],
-    "price": "39,95",
-    "color": "green",
-    "image": "https://cdn.thesting.com/is/image/thesting/330884-greenmiddle_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "39",
+    "title": "Satin Frill Blouse",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 39.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/330884-greenmiddle_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   },
   {
-    "sku": 40,
-    "name": "Jacquard Batwing Blouse",
-    "category": [
-      "Shirt",
-      "Female"
-    ],
-    "price": "39,95",
-    "color": "green",
-    "image": "https://cdn.thesting.com/is/image/thesting/330981-greenlight_psfront1?wid=980&qlt=80&resMode=sharp"
+    "id": "40",
+    "title": "Jacquard Batwing Blouse",
+    "category_hierarchies": {
+      "categories": ["Shirt", "Female"]
+    },
+    "product_metadata": {
+      "currency_code": "USD",
+      "exact_price": {
+        "display_price": 39.95
+      },
+      "images": [
+        "https://cdn.thesting.com/is/image/thesting/330981-greenlight_psfront1?wid=980&qlt=80&resMode=sharp"
+      ]
+    }
   }
 ]
