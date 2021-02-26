@@ -9,37 +9,26 @@ export const Modal: React.FC<{ title: string, show: boolean, onClose: () => void
     <>
       <div
         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-        onClick={onClose}
       >
         <div className="relative w-auto my-6 mx-auto max-w-3xl">
-          {/*content*/}
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-            {/*header*/}
             <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
-              <h3 className="text-3xl font-semibold">
+              <h3 className="text-xl font-semibold">
                 {title}
               </h3>
-              <button
-                className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                onClick={onClose}
-              >
-                <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                  ×
-                    </span>
-              </button>
             </div>
             {/*body*/}
             {children}
             {/*footer*/}
-            <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
+            <div className="flex items-center justify-end p-2 border-t border-solid border-gray-300 rounded-b">
               <button
-                className="background-transparent font-bold uppercase px-6 py-2 text-sm mr-1 mb-1"
+                className="background-transparent font-bold uppercase px-6 py-2 text-sm mr-1 mb-1 outline-none focus:outline-none"
                 type="button"
                 style={{ transition: "all .15s ease" }}
                 onClick={onClose}
               >
                 Close
-                  </button>
+                </button>
             </div>
           </div>
         </div>

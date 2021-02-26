@@ -14,7 +14,7 @@ const recommendations: IProduct[] = [];
 
 const App = () => {
   const [category, setCategory] = React.useState("Shirt");
-  const [viewProduct, setViewProduct] = React.useState<IProduct>();
+  const [viewProduct, setViewProduct] = React.useState<IProduct>(products[0]);
   const resetViewProduct = React.useCallback(() => setViewProduct(null), [setViewProduct]);
 
   return (
@@ -27,7 +27,7 @@ const App = () => {
             <Grid emphasize>
               {recommendations.length > 0 ? (
                 recommendations.map((product) => (
-                  <Product key={product.id} product={product} onProductView={setViewProduct}/>
+                  <Product key={product.id} product={product} onProductView={setViewProduct} />
                 ))
               ) : (
                   <h1 className="text-white text-lg py-2">
