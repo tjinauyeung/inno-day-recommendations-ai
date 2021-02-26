@@ -103,8 +103,9 @@ const Product: FC<{ product: IProduct }> = ({ product }) => {
     console.log("[event-emitted]: 'like-product'");
     console.log(JSON.stringify(data, null, 2));
     window.dataLayer.push({
+      event: "like-product",
       automl: {
-        event: "like-product",
+        eventType: "like-product",
         userInfo: {
           // In most cases, the user and visitor ID fields can be populated
           // from a client side JavaScript variable, for example a cookie.
@@ -130,8 +131,9 @@ const Product: FC<{ product: IProduct }> = ({ product }) => {
     console.log("[event-emitted]: 'dislike-product'");
     console.log(JSON.stringify(data, null, 2));
     window.dataLayer.push({
+      event: "dislike-product",
       automl: {
-        event: "dislike-product",
+        eventType: "dislike-product",
         userInfo: {
           // In most cases, the user and visitor ID fields can be populated
           // from a client side JavaScript variable, for example a cookie.
