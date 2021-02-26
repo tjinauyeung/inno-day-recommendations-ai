@@ -14,7 +14,7 @@ const recommendations: IProduct[] = [];
 
 const App = () => {
   const [category, setCategory] = React.useState("Shirt");
-  const [viewProduct, setViewProduct] = React.useState<IProduct>(products[0]);
+  const [viewProduct, setViewProduct] = React.useState<IProduct>();
   const resetViewProduct = React.useCallback(() => setViewProduct(null), [setViewProduct]);
 
   return (
