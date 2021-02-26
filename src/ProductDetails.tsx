@@ -37,7 +37,6 @@ const ProductDetailsContent: React.FC<{ product: IProduct }> = ({ product }) => 
       productEventDetail: {
         productDetails: [{
           id: product.id,
-          price: product.product_metadata.exact_price.display_price,
           quantity: 1,
         }],
       }
