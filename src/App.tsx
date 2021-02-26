@@ -1,20 +1,8 @@
 import * as React from "react";
 import { FC } from "react";
 import products from "../products.json";
-
-interface IProduct {
-  id: string;
-  title: string;
-  category_hierarchies: {
-    categories: string[];
-  };
-  product_metadata: {
-    exact_price: {
-      display_price: number;
-    };
-    images: string[];
-  };
-}
+import { ProductDetails } from "./ProductDetails";
+import { IProduct } from "./types";
 
 const CATEGORIES = [
   { label: "Shirt", value: "Shirt" },
@@ -26,27 +14,30 @@ const recommendations: IProduct[] = [];
 
 const App = () => {
   const [category, setCategory] = React.useState("Shirt");
+  const [viewProduct, setViewProduct] = React.useState<IProduct>();
+  const resetViewProduct = React.useCallback(() => setViewProduct(null), [setViewProduct]);
 
   return (
     <div className="p-24 min-h-screen bg-gray-900">
       <div className="container mx-auto">
         <section className="my-12">
           <Heading>The Stinged</Heading>
-
           <section className="my-12">
             <Subheading active>Just for you</Subheading>
             <Grid emphasize>
               {recommendations.length > 0 ? (
                 recommendations.map((product) => (
-                  <Product key={product.id} product={product} />
+                  <Product key={product.id} product={product} onProductView={setViewProduct}/>
                 ))
               ) : (
-                <h1 className="text-white text-lg py-2">
-                  No recommendations yet
-                </h1>
-              )}
+                  <h1 className="text-white text-lg py-2">
+                    No recommendations yet
+                  </h1>
+                )}
             </Grid>
           </section>
+
+          <ProductDetails product={viewProduct} onClose={resetViewProduct} />
 
           {CATEGORIES.map((c) => (
             <button
@@ -64,7 +55,7 @@ const App = () => {
                 p.category_hierarchies.categories.includes(category)
               )
               .map((p) => (
-                <Product key={p.id} product={p} />
+                <Product key={p.id} product={p} onProductView={setViewProduct} />
               ))}
           </Grid>
         </section>
@@ -98,8 +89,8 @@ const Grid: FC<{ emphasize?: boolean }> = ({ children, emphasize }) => (
   </div>
 );
 
-const Product: FC<{ product: IProduct }> = ({ product }) => {
-  const like = (data) => () => {
+const Product: FC<{ onProductView: (product: IProduct) => void, product: IProduct }> = ({ product, onProductView }) => {
+  const like = (data) => e => {
     console.log("[event-emitted]: 'like-product'");
     console.log(JSON.stringify(data, null, 2));
     window.dataLayer.push({
@@ -159,7 +150,8 @@ const Product: FC<{ product: IProduct }> = ({ product }) => {
       <h1 className="text-xl font-bold">{product.title}</h1>
       <img
         src={product.product_metadata.images[0]}
-        className="flex-1 h-48 m-auto"
+        className="flex-1 h-48 m-auto cursor-pointer"
+        onClick={() => onProductView(product)}
       />
       <div className="flex justify-between items-end">
         <div>
@@ -177,6 +169,7 @@ const Product: FC<{ product: IProduct }> = ({ product }) => {
 
 const Button = ({ children, onClick }) => (
   <button
+
     className="rounded-full w-12 h-12 shadow mr-2 text-3xl focus:outline-none focus:ring"
     onClick={onClick}
   >
