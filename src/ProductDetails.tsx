@@ -6,6 +6,7 @@ const addEvent = (eventType: string, eventDetails: any) =>
   // @ts-ignore
 
   window.dataLayer.push({
+    event: 'custom-event',
     eventType,
     userInfo: {
       // @ts-ignore - defined in GTM
