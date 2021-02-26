@@ -1,16 +1,13 @@
 import axios from "axios";
 
 const randomId = (max = 40) => String(Math.ceil(Math.random() * max));
+const formatJSON = (json: any) => JSON.stringify(json, null, 2);
 
 const key = "AIzaSyC6iyTSdcvcWAcnIoew44OI__gdWlwIJNs";
 const url = `https://recommendationengine.googleapis.com/v1beta1/projects/xsd-recommendation-ai/locations/global/catalogs/default_catalog/eventStores/default_event_store/userEvents:write?key=${key}`;
 
-const sendRequest = (idx: number) => {
-  const visitorId = randomId();
-  const userId = randomId();
-  const productId = randomId();
-
-  const data = {
+const events = {
+  pdp: (visitorId: string, userId: string, productId: string) => ({
     eventType: "detail-page-view",
     userInfo: {
       visitorId: visitorId,
@@ -29,24 +26,29 @@ const sendRequest = (idx: number) => {
       ],
     },
     eventTime: "2021-01-27T11:11:40.143685881Z",
-  };
+  }),
+};
+
+const sendRequest = (idx: number) => {
+  const visitorId = randomId();
+  const userId = randomId();
+  const productId = randomId();
+  const data = events.pdp(visitorId, userId, productId);
 
   axios({
     method: "post",
     url,
     data,
   })
-    .then(
-      (response) => {
-        console.log(`imported user event ${idx}`);
-        console.log("status:", response.status);
-        console.log(JSON.stringify(response.data, null, 2));
-      },
-      (e) => {
-        console.log("importing failed with data:", data);
-        console.log(e);
-      }
-    )
+    .then((response) => {
+      console.log(`imported user event ${idx}`);
+      console.log("status:", response.status);
+      console.log(formatJSON(response.data));
+    })
+    .catch((e) => {
+      console.log("importing failed with data:", formatJSON(data));
+      console.log("status:", e.status);
+    })
     .finally(() => {
       console.log("import complete.");
     });
@@ -54,6 +56,6 @@ const sendRequest = (idx: number) => {
 
 console.log("starting import script");
 
-for (let i = 0; i < 5001; i++) {
+for (let i = 0; i <= 2000; i++) {
   sendRequest(i);
 }
