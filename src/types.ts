@@ -11,3 +11,8 @@ export interface IProduct {
     images: string[];
   };
 }
+
+export interface ProductDetail {
+  id: string;
+  quantity: number;
+}
