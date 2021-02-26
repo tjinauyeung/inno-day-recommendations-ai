@@ -3,6 +3,8 @@ import { FC } from "react";
 import products from "../products.json";
 import { ProductDetails } from "./ProductDetails";
 import { IProduct } from "./types";
+import { Recommendations } from './Recommendations';
+import { Product } from './Product';
 
 const CATEGORIES = [
   { label: "Shirt", value: "Shirt" },
@@ -25,15 +27,7 @@ const App = () => {
           <section className="my-12">
             <Subheading active>Just for you</Subheading>
             <Grid emphasize>
-              {recommendations.length > 0 ? (
-                recommendations.map((product) => (
-                  <Product key={product.id} product={product} onProductView={setViewProduct} />
-                ))
-              ) : (
-                  <h1 className="text-white text-lg py-2">
-                    No recommendations yet
-                  </h1>
-                )}
+              <Recommendations payload={{ userEvent: { eventType: "home-page-view" } }} dryRun/>
             </Grid>
           </section>
 
@@ -89,92 +83,5 @@ const Grid: FC<{ emphasize?: boolean }> = ({ children, emphasize }) => (
   </div>
 );
 
-const Product: FC<{ onProductView: (product: IProduct) => void, product: IProduct }> = ({ product, onProductView }) => {
-  const like = (data) => e => {
-    console.log("[event-emitted]: 'like-product'");
-    console.log(JSON.stringify(data, null, 2));
-    window.dataLayer.push({
-      event: "like-product",
-      automl: {
-        eventType: "like-product",
-        userInfo: {
-          // In most cases, the user and visitor ID fields can be populated
-          // from a client side JavaScript variable, for example a cookie.
-          // If you set the user and/or visitor ID values from the server,
-          // populate the `userId` and/or `visitorId` fields here.
-        },
-        eventDetail: {
-          recommendationToken: "recommendation-token",
-          // In most cases, the experiment ID field is populated from a
-          // client side JavaScript variable as defined by the experiment
-          // manager.
-          // If you set the experiment ID value from the server,
-          // populate the `experimentIds` field here.
-        },
-        productEventDetail: {
-          productDetails: [data],
-        },
-      },
-    });
-  };
-
-  const dislike = (data) => () => {
-    console.log("[event-emitted]: 'dislike-product'");
-    console.log(JSON.stringify(data, null, 2));
-    window.dataLayer.push({
-      event: "dislike-product",
-      automl: {
-        eventType: "dislike-product",
-        userInfo: {
-          // In most cases, the user and visitor ID fields can be populated
-          // from a client side JavaScript variable, for example a cookie.
-          // If you set the user and/or visitor ID values from the server,
-          // populate the `userId` and/or `visitorId` fields here.
-        },
-        eventDetail: {
-          recommendationToken: "recommendation-token",
-          // In most cases, the experiment ID field is populated from a
-          // client side JavaScript variable as defined by the experiment
-          // manager.
-          // If you set the experiment ID value from the server,
-          // populate the `experimentIds` field here.
-        },
-        productEventDetail: {
-          productDetails: [data],
-        },
-      },
-    });
-  };
-  return (
-    <div className="shadow rounded-2xl p-6 bg-white opacity-90 flex flex-col">
-      <h1 className="text-xl font-bold">{product.title}</h1>
-      <img
-        src={product.product_metadata.images[0]}
-        className="flex-1 h-48 m-auto cursor-pointer"
-        onClick={() => onProductView(product)}
-      />
-      <div className="flex justify-between items-end">
-        <div>
-          <Button onClick={like(product)}>😍</Button>
-          <Button onClick={dislike(product)}>😢</Button>
-        </div>
-        <p className="text-xl font-bold font-mono text-right">
-          {/* {formatPrice(product.price)} */}
-          {product.product_metadata.exact_price.display_price}
-        </p>
-      </div>
-    </div>
-  );
-};
-
-const Button = ({ children, onClick }) => (
-  <button
-
-    className="rounded-full w-12 h-12 shadow mr-2 text-3xl focus:outline-none focus:ring"
-    onClick={onClick}
-  >
-    {children}
-  </button>
-);
 
 export default App;
