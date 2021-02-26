@@ -1,18 +1,25 @@
 {
-  "id": "1",
-  "title": "Minimal Printed Shirt",
-  "category_hierarchies": [
-    {
-      "categories": [
-        "Shirt",
-        "Male"
-      ]
-    }
-  ],
-  "product_metadata": {
-    "currency_code": "USD",
-    "exact_price": {
-      "display_price": 29.95
-    }
+  "name": "google-recommendations-ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "generate": "ts-node ./generate.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "17.0.0",
+    "@types/react-dom": "17.0.0",
+    "parcel": "1.12.4",
+    "typescript": "4.1.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "ts-node": "9.1.1"
   }
 }
