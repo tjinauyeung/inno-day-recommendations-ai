@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const Modal: React.FC<{ title: string, show: boolean, onClose: () => void }> = ({ title, show, onClose, children }) => {
+export const Modal: React.FC<{ title?: string, show: boolean, onClose: () => void }> = ({ title, show, onClose, children }) => {
   if (!show) {
     return null;
   }
