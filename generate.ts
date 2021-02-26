@@ -7,6 +7,13 @@ const key = "AIzaSyC6iyTSdcvcWAcnIoew44OI__gdWlwIJNs";
 const url = `https://recommendationengine.googleapis.com/v1beta1/projects/xsd-recommendation-ai/locations/global/catalogs/default_catalog/eventStores/default_event_store/userEvents:write?key=${key}`;
 
 const events = {
+  home: (visitorId: string) => ({
+    eventType: "home-page-view",
+    userInfo: {
+      visitorId,
+    },
+    eventTime: "2021-01-15T11:11:40.143685881Z",
+  }),
   pdp: (visitorId: string, userId: string, productId: string) => ({
     eventType: "detail-page-view",
     userInfo: {
@@ -25,7 +32,7 @@ const events = {
         },
       ],
     },
-    eventTime: "2021-01-27T11:11:40.143685881Z",
+    eventTime: "2021-01-15T11:11:40.143685881Z",
   }),
 };
 
@@ -33,7 +40,8 @@ const sendRequest = (idx: number) => {
   const visitorId = randomId();
   const userId = randomId();
   const productId = randomId();
-  const data = events.pdp(visitorId, userId, productId);
+//   const data = events.pdp(visitorId, userId, productId);
+  const data = events.home(visitorId);
 
   axios({
     method: "post",
@@ -47,7 +55,7 @@ const sendRequest = (idx: number) => {
     })
     .catch((e) => {
       console.log("importing failed with data:", formatJSON(data));
-      console.log("status:", e.status);
+      console.log("message:", e.message);
     })
     .finally(() => {
       console.log("import complete.");
@@ -56,6 +64,6 @@ const sendRequest = (idx: number) => {
 
 console.log("starting import script");
 
-for (let i = 0; i <= 2000; i++) {
+for (let i = 0; i <= 10000; i++) {
   sendRequest(i);
 }
