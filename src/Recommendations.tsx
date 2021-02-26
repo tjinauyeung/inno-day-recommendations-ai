@@ -10,7 +10,7 @@ const modelName = 'recently_viewed_default';
 
 const endpoint = `https://recommendationengine.googleapis.com/v1beta1/projects/${projectId}/locations/global/catalogs/default_catalog/eventStores/default_event_store/placements/${modelName}:predict?key=${apiKey}`
 
-export const Recommendations: FC<{ payload: any, dryRun?: boolean }> = ({ payload, dryRun = false }) => {
+export const Recommendations: FC<{ payload: any, dryRun?: boolean, onProductClick: any }> = ({ payload, onProductClick, dryRun = false }) => {
   const fetcher = (url: string) => fetch(url, {
     method: 'POST',
     headers: {
@@ -36,15 +36,13 @@ export const Recommendations: FC<{ payload: any, dryRun?: boolean }> = ({ payloa
     )
   }
   if (data?.results?.length) {
-    console.log(data?.results);
     return (
       <>
         {data.results.map(({ id }) => products.find(product => product.id === id)).filter(p => !!p).map(product => (
-          <Product key={product.id} product={product}/>
+          <Product key={product.id} product={product} onProductView={onProductClick}/>
         ))}
       </>
     )
-    return "Data";
   }
   return (
     <h1 className="text-white text-lg py-2">

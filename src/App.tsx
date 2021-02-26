@@ -12,8 +12,6 @@ const CATEGORIES = [
   { label: "Shoes", value: "Shoe" },
 ];
 
-const recommendations: IProduct[] = [];
-
 const App = () => {
   const [category, setCategory] = React.useState("Shirt");
   const [viewProduct, setViewProduct] = React.useState<IProduct>();
@@ -27,7 +25,7 @@ const App = () => {
           <section className="my-12">
             <Subheading active>Just for you</Subheading>
             <Grid emphasize>
-              <Recommendations payload={{ userEvent: { eventType: "home-page-view" } }} dryRun/>
+              <Recommendations payload={{ userEvent: { eventType: "home-page-view" } }} dryRun onProductClick={setViewProduct}/>
             </Grid>
           </section>
 
