@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Modal } from './Modal';
-import { IProduct } from './types';
+import * as React from "react";
+import { Modal } from "./Modal";
+import { IProduct } from "./types";
 
 const addEvent = (product: IProduct, eventName: string) => {
   window.dataLayer.push({
@@ -26,24 +26,26 @@ const addEvent = (product: IProduct, eventName: string) => {
       },
     },
   });
-}
+};
 
-const ProductDetailsContent: React.FC<{ product: IProduct }> = ({ product }) => {
+const ProductDetailsContent: React.FC<{ product: IProduct }> = ({
+  product,
+}) => {
   const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
-    console.log('Push "detail-page-view"')
+    console.log('Push "detail-page-view"');
     addEvent(product, "detail-page-view");
   }, [product, setCount]);
 
   const addToCard = React.useCallback(() => {
     addEvent(product, "add-to-card");
-    setCount(c => c + 1)
+    setCount((c) => c + 1);
   }, [product]);
 
   const purchaseComplete = React.useCallback(() => {
     addEvent(product, "purchase-complete");
-    setCount(0)
+    setCount(0);
   }, [product]);
 
   return (
@@ -54,28 +56,32 @@ const ProductDetailsContent: React.FC<{ product: IProduct }> = ({ product }) => 
       />
       {<p className="text-gray-500 text-xs m-2">{count} product(s)</p>}
       <div className="flex flex-col">
-        <button type="button" className="m-2 focus:outline-none text-white text-xs py-2.5 px-5 rounded-md outline-none focus:outline-none bg-blue-500 hover:bg-blue-600 hover:shadow-lg" onClick={addToCard}>
+        <button
+          type="button"
+          className="m-2 focus:outline-none text-white text-xs py-2.5 px-5 rounded-md outline-none focus:outline-none bg-blue-500 hover:bg-blue-600 hover:shadow-lg"
+          onClick={addToCard}
+        >
           Add to card
-          </button>
-        <button type="button" className="m-2 focus:outline-none text-white text-xs py-2.5 px-5 rounded-md outline-none focus:outline-none bg-green-500 hover:bg-green-600 hover:shadow-lg" onClick={purchaseComplete}>
+        </button>
+        <button
+          type="button"
+          className="m-2 focus:outline-none text-white text-xs py-2.5 px-5 rounded-md outline-none focus:outline-none bg-green-500 hover:bg-green-600 hover:shadow-lg"
+          onClick={purchaseComplete}
+        >
           Purchase
-          </button>
+        </button>
       </div>
     </div>
-  )
-    ;
-}
+  );
+};
 
-
-
-export const ProductDetails: React.FC<{ product?: IProduct, onClose: () => void }> = ({ product, onClose }) => {
+export const ProductDetails: React.FC<{
+  product?: IProduct;
+  onClose: () => void;
+}> = ({ product, onClose }) => {
   return (
-    <Modal
-      show={!!product}
-      title={product?.title}
-      onClose={onClose}
-    >
+    <Modal show={!!product} title={String(product?.title)} onClose={onClose}>
       {product && <ProductDetailsContent product={product} />}
     </Modal>
-  )
+  );
 };
