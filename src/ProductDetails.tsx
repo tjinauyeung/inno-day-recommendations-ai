@@ -4,7 +4,6 @@ import { IProduct } from './types';
 
 const addEvent = (product: IProduct, eventName: string) => {
   window.dataLayer.push({
-    event: eventName,
     automl: {
       eventType: eventName,
       userInfo: {
@@ -36,8 +35,8 @@ const ProductDetailsContent: React.FC<{ product: IProduct }> = ({ product }) => 
     addEvent(product, "detail-page-view");
   }, [product, setCount]);
 
-  const addToCard = React.useCallback(() => {
-    addEvent(product, "add-to-card");
+  const addToCart = React.useCallback(() => {
+    addEvent(product, "add-to-cart");
     setCount(c => c + 1)
   }, [product]);
 
@@ -54,8 +53,8 @@ const ProductDetailsContent: React.FC<{ product: IProduct }> = ({ product }) => 
       />
       {<p className="text-gray-500 text-xs m-2">{count} product(s)</p>}
       <div className="flex flex-col">
-        <button type="button" className="m-2 focus:outline-none text-white text-xs py-2.5 px-5 rounded-md outline-none focus:outline-none bg-blue-500 hover:bg-blue-600 hover:shadow-lg" onClick={addToCard}>
-          Add to card
+        <button type="button" className="m-2 focus:outline-none text-white text-xs py-2.5 px-5 rounded-md outline-none focus:outline-none bg-blue-500 hover:bg-blue-600 hover:shadow-lg" onClick={addToCart}>
+          Add to cart
           </button>
         <button type="button" className="m-2 focus:outline-none text-white text-xs py-2.5 px-5 rounded-md outline-none focus:outline-none bg-green-500 hover:bg-green-600 hover:shadow-lg" onClick={purchaseComplete}>
           Purchase
